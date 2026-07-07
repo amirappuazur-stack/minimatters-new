@@ -1,0 +1,468 @@
+/* =====================================================
+   MINI MATTERS
+   animations.css
+===================================================== */
+
+/* Fade In Page */
+body{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* ==========================
+   Hero Animation
+========================== */
+
+.hero-content{
+    animation:heroUp 1.2s ease;
+}
+
+@keyframes heroUp{
+
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   Logo
+========================== */
+
+.logo{
+    animation:slideLeft .8s ease;
+}
+
+@keyframes slideLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ==========================
+   Navigation
+========================== */
+
+nav li{
+
+    opacity:0;
+
+    animation:menuDown .8s forwards;
+
+}
+
+nav li:nth-child(1){
+    animation-delay:.15s;
+}
+
+nav li:nth-child(2){
+    animation-delay:.25s;
+}
+
+nav li:nth-child(3){
+    animation-delay:.35s;
+}
+
+nav li:nth-child(4){
+    animation-delay:.45s;
+}
+
+nav li:nth-child(5){
+    animation-delay:.55s;
+}
+
+@keyframes menuDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   Hero Title
+========================== */
+
+.hero h1{
+
+    animation:titleFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes titleFloat{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ==========================
+   Launch Badge
+========================== */
+
+.coming-badge{
+
+    animation:badgePulse 2.5s infinite;
+
+}
+
+@keyframes badgePulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+.btn{
+
+    transition:.35s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.btn:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================
+   Cards
+========================== */
+
+.card{
+
+    transition:.35s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+/* ==========================
+   Icons
+========================== */
+
+.icons a{
+
+    transition:.35s ease;
+
+}
+
+.icons a:hover{
+
+    transform:translateY(-8px) scale(1.1);
+
+}
+
+/* ==========================
+   Footer Icons
+========================== */
+
+.footer-icons a{
+
+    transition:.35s ease;
+
+}
+
+.footer-icons a:hover{
+
+    transform:rotate(8deg) scale(1.15);
+
+}
+
+/* ==========================
+   Fade on Scroll
+========================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:all .9s ease;
+
+}
+
+/* ==========================
+   Underline Animation
+========================== */
+
+nav a{
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#7F9C84;
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================
+   Image Hover
+========================== */
+
+img{
+
+    transition:.4s ease;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ==========================
+   Section Title
+========================== */
+
+section h2{
+
+    animation:fadeTitle 1.2s ease;
+
+}
+
+@keyframes fadeTitle{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   Social Floating
+========================== */
+
+.icons a:nth-child(1){
+
+    animation:float1 5s infinite ease-in-out;
+
+}
+
+.icons a:nth-child(2){
+
+    animation:float2 5.5s infinite ease-in-out;
+
+}
+
+.icons a:nth-child(3){
+
+    animation:float3 6s infinite ease-in-out;
+
+}
+
+.icons a:nth-child(4){
+
+    animation:float4 6.5s infinite ease-in-out;
+
+}
+
+@keyframes float1{
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+@keyframes float2{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+@keyframes float3{
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes float4{
+
+    50%{
+
+        transform:translateY(-9px);
+
+    }
+
+}
+
+/* ==========================
+   Smooth Appearance
+========================== */
+
+.story,
+.features,
+.social,
+.contact,
+.newsletter{
+
+    animation:sectionFade 1s ease;
+
+}
+
+@keyframes sectionFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================
+   Accessibility
+========================== */
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}
