@@ -218,7 +218,7 @@ nav a:hover::after{
 
     min-height:100vh;
 
-    background:url("../assets/hero.webp") center center/cover no-repeat;
+    background:url("../assets/hero.webp") center top/cover no-repeat;
 
     display:flex;
 
