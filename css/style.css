@@ -216,25 +216,17 @@ nav a:hover::after{
 
     width:100%;
 
-    min-height:100vh;
-
-    background:url("../assets/hero.webp") center top/cover no-repeat;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-end;
+    line-height:0;
 
 }
 
-.overlay{
+.hero-img{
 
-    position:absolute;
+    width:100%;
 
-    inset:0;
+    height:auto;
 
-    background:rgba(255,255,255,.05);
+    display:block;
 
 }
 
@@ -868,32 +860,6 @@ nav ul{
 
 }
 
-.hero{
-
-    min-height:100vh;
-
-    padding:140px 25px 80px;
-
-}
-
-.hero h1{
-
-    font-size:56px;
-
-}
-
-.hero h2{
-
-    font-size:28px;
-
-}
-
-.hero p{
-
-    font-size:18px;
-
-}
-
 .cards{
 
     grid-template-columns:1fr;
@@ -923,16 +889,6 @@ section{
 .logo{
 
     font-size:28px;
-
-}
-
-.hero{
-
-    min-height:100vh;
-
-    background-position:center center;
-
-    padding:150px 20px 80px;
 
 }
 
@@ -1056,12 +1012,6 @@ nav a{
 
 }
 
-.hero{
-
-    padding:160px 18px 70px;
-
-}
-
 .hero h1{
 
     font-size:36px;
@@ -1173,12 +1123,6 @@ img{
     height:auto;
 
     display:block;
-
-}
-
-.hero{
-
-    background-attachment:scroll;
 
 }
 
