@@ -1273,6 +1273,36 @@ button:focus{
 
     overflow:hidden;
 
+    cursor:zoom-in;
+
+    position:relative;
+
+}
+
+.stock-badge{
+
+    position:absolute;
+
+    top:14px;
+
+    left:14px;
+
+    background:var(--dark);
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    padding:6px 12px;
+
+    border-radius:50px;
+
+    z-index:2;
+
 }
 
 .product-img-wrap img{
@@ -1440,6 +1470,116 @@ button:focus{
     grid-template-columns:1fr;
 
 }
+
+}
+
+/* ===================================================
+   LIGHTBOX (full-size product view)
+=================================================== */
+
+.lightbox-overlay{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:99999;
+
+    background:rgba(20,16,12,.88);
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:30px;
+
+}
+
+.lightbox-overlay.active{
+
+    display:flex;
+
+}
+
+.lightbox-overlay img{
+
+    max-width:min(600px,90vw);
+
+    max-height:85vh;
+
+    width:auto;
+
+    border-radius:14px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+    background:white;
+
+    object-fit:contain;
+
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:24px;
+
+    right:30px;
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    border:none;
+
+}
+
+.lightbox-close:hover{
+
+    background:var(--primary);
+
+    transform:rotate(90deg);
+
+}
+
+.lightbox-caption{
+
+    position:absolute;
+
+    bottom:26px;
+
+    left:0;
+
+    right:0;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:15px;
+
+    letter-spacing:.3px;
 
 }
 
