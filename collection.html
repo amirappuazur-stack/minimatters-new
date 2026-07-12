@@ -199,7 +199,8 @@
                 <div class="product-img-wrap">
                     <img src="assets/products/earth-shaker-monster-jam-tshirt.webp"
                          alt="Monster Jam Earth Shaker yellow kids t-shirt"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Monster Jam "Earth Shaker" T-Shirt</div>
@@ -215,7 +216,8 @@
                 <div class="product-img-wrap">
                     <img src="assets/products/minnie-mouse-tshirt.webp"
                          alt="Disney Minnie Mouse peach kids t-shirt"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Disney Minnie Mouse T-Shirt</div>
@@ -231,7 +233,8 @@
                 <div class="product-img-wrap">
                     <img src="assets/products/frozen-elsa-full-sleeve-tshirt.webp"
                          alt="Disney Frozen Elsa full sleeve kids t-shirt"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Frozen "Elsa Memories" Full Sleeve T-Shirt</div>
@@ -245,9 +248,11 @@
 
             <div class="product-card">
                 <div class="product-img-wrap">
+                    <span class="stock-badge">2 in Stock</span>
                     <img src="assets/products/hangin-with-the-boys-tshirt.webp"
                          alt="Disney Hangin with the Boys sky blue kids t-shirt featuring Mickey, Donald and Goofy"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">"Hangin' With The Boys" T-Shirt</div>
@@ -261,9 +266,11 @@
 
             <div class="product-card">
                 <div class="product-img-wrap">
+                    <span class="stock-badge">2 in Stock</span>
                     <img src="assets/products/toy-story-red-tshirt.webp"
                          alt="Disney Pixar Toy Story red kids t-shirt featuring Woody, Buzz and Rex"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Toy Story Red T-Shirt</div>
@@ -279,7 +286,8 @@
                 <div class="product-img-wrap">
                     <img src="assets/products/stitch-space-case-tshirt.webp"
                          alt="Lilo and Stitch Space Case blue kids t-shirt"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Stitch "Space Case" T-Shirt</div>
@@ -295,7 +303,8 @@
                 <div class="product-img-wrap">
                     <img src="assets/products/cars-kachow-tshirt.webp"
                          alt="Disney Cars Kachow coral kids t-shirt"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Disney Cars "Kachow!" T-Shirt</div>
@@ -311,7 +320,8 @@
                 <div class="product-img-wrap">
                     <img src="assets/products/cars-lmq-95-tshirt.webp"
                          alt="Disney Cars Lightning McQueen LMQ 95 red kids t-shirt"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Disney Cars "LMQ 95" T-Shirt</div>
@@ -327,7 +337,8 @@
                 <div class="product-img-wrap">
                     <img src="assets/products/bluey-tshirt.webp"
                          alt="Bluey navy blue kids t-shirt"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Bluey T-Shirt</div>
@@ -341,9 +352,11 @@
 
             <div class="product-card">
                 <div class="product-img-wrap">
+                    <span class="stock-badge">2 in Stock</span>
                     <img src="assets/products/toy-story-white-tshirt.webp"
                          alt="Disney Pixar Toy Story white kids t-shirt featuring Woody, Buzz and Forky"
-                         loading="lazy" width="900" height="900">
+                         loading="lazy" width="900" height="900"
+                         onclick="openLightbox(this.src, this.alt)">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Toy Story White T-Shirt</div>
@@ -402,6 +415,18 @@
 
 </section>
 
+<!-- =========================
+     LIGHTBOX
+========================== -->
+
+<div class="lightbox-overlay" id="lightbox" onclick="if(event.target===this) closeLightbox()">
+    <button type="button" class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img src="" alt="" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
 <footer>
 
     <div class="container">
@@ -423,6 +448,31 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<script>
+    function openLightbox(src, alt){
+        var overlay = document.getElementById('lightbox');
+        var img = document.getElementById('lightbox-img');
+        var caption = document.getElementById('lightbox-caption');
+        img.src = src;
+        img.alt = alt;
+        caption.textContent = alt;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(){
+        var overlay = document.getElementById('lightbox');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape'){
+            closeLightbox();
+        }
+    });
+</script>
 
 </body>
 
